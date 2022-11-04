@@ -1,4 +1,4 @@
-# boom-labs-http-server
+# boomhttp
 ## requirements
 1. 설정 파일을 읽어오는 CLI application을 만든다.
 2. TCP 소켓 연결요청을 수신한다.
