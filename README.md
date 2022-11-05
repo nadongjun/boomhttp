@@ -33,7 +33,7 @@ cargo run -- configuration/config.json
 ```
 
 ### util
-- 응답 메세지 생성
+- HTTP 응답 메세지 생성
 
 ## Test
 ```sh
@@ -41,8 +41,9 @@ cargo test
 ```
 
 ## To-do
-1. parser unit 테스트 추가
-2. 스레드 풀 추가해서 성능 개선
+1. CRUD 기능 구현
+2. http, parser unit 테스트 추가
+3. 스레드 풀 추가해서 성능 개선
    
 ## Reference
 - [lib생성](https://webcache.googleusercontent.com/search?q=cache:MvISwrshgSYJ:https://bguru.tistory.com/55&cd=7&hl=ko&ct=clnk&gl=kr)
