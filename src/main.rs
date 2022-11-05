@@ -3,9 +3,11 @@ use std::net::TcpListener;
 use std::net::TcpStream;
 use std::fs::File;
 use util;
+use parser;
 
 
 fn main() {
+    parser::read_configfile();
     let listener = TcpListener::bind("localhost:8080").unwrap();
     for stream in listener.incoming() {
         let stream = stream.unwrap();
