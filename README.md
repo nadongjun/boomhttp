@@ -27,6 +27,7 @@
 ## Module
 ### parser
 - cli 파라미터 파싱
+- Loop reedline 
 ```sh
 # configuration 파일을 읽음
 cargo run -- configuration/config.json
@@ -41,9 +42,8 @@ cargo test
 ```
 
 ## To-do
-1. CRUD 기능 구현
-2. http, parser unit 테스트 추가
-3. 스레드 풀 추가해서 성능 개선
+1. CRUD 기능 구현 (GET, PUT, DEL)
+2. HTTP 스레드 풀 추가해서 성능 개선
    
 ## Reference
 - [lib생성](https://webcache.googleusercontent.com/search?q=cache:MvISwrshgSYJ:https://bguru.tistory.com/55&cd=7&hl=ko&ct=clnk&gl=kr)
