@@ -7,11 +7,12 @@ use parser;
 
 
 fn main() {
-    parser::read_configfile();
+    //parser::read_configfile();
+    parser::init_parser();
     let listener = TcpListener::bind("localhost:8080").unwrap();
     for stream in listener.incoming() {
         let stream = stream.unwrap();
-        println!("Connection established!");
+        println!("---- HTTP Connection established! ----\n");
         handle_connection(stream)
     }
 }
