@@ -8,5 +8,4 @@ edition = "2021"
 [dependencies]
 util = { path = "util" }
 parser = { path = "parser" }
-rustyline = "10.0.0"
-
+ 

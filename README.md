@@ -29,6 +29,7 @@
 - cli 파라미터 파싱
 - Loop reedline 
 ```sh
+source $HOME/.cargo/env
 # configuration 파일을 읽음
 cargo run -- configuration/config.json
 ```
