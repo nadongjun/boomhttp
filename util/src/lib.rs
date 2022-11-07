@@ -10,3 +10,8 @@ pub fn generate_response(response_code : &str,status : &str) -> String {
 
     return response;
 }
+
+pub fn parse_url(url : &str) -> String {
+
+    
+}
