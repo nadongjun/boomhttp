@@ -57,8 +57,8 @@ cargo test
 ```
 
 ## To-do
-1. CRUD 기능 구현 (GET, PUT, DEL)
-2. HTTP 스레드 풀 추가해서 성능 개선
+1. URL parser 추가
+2. CRUD 기능 구현 (GET, PUT, DEL)
    
 ## Reference
 - [lib생성](https://webcache.googleusercontent.com/search?q=cache:MvISwrshgSYJ:https://bguru.tistory.com/55&cd=7&hl=ko&ct=clnk&gl=kr)
