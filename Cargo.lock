@@ -53,8 +53,8 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 name = "boomserver"
 version = "0.1.0"
 dependencies = [
+ "cli",
  "http",
- "parser",
 ]
 
 [[package]]
@@ -103,6 +103,15 @@ dependencies = [
  "textwrap",
  "unicode-width",
  "vec_map",
+]
+
+[[package]]
+name = "cli"
+version = "0.1.0"
+dependencies = [
+ "colored",
+ "reedline",
+ "structopt",
 ]
 
 [[package]]
@@ -444,15 +453,6 @@ dependencies = [
  "redox_syscall",
  "smallvec",
  "windows-sys",
-]
-
-[[package]]
-name = "parser"
-version = "0.1.0"
-dependencies = [
- "colored",
- "reedline",
- "structopt",
 ]
 
 [[package]]

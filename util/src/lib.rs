@@ -11,7 +11,8 @@ pub fn generate_response(response_code : &str,status : &str) -> String {
     return response;
 }
 
-pub fn parse_url(url : &str) -> String {
-
-    
+pub fn parse_url(_url : &str) -> String {
+    let contents = String::new();
+    let response = format!("{}", contents);
+    return response
 }

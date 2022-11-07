@@ -1,7 +1,7 @@
-use parser;
+use cli;
 use http;
 
 fn main() {
-    parser::init_parser();
+    cli::init_cli();
     http::init_http_server();
 }

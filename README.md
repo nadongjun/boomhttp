@@ -12,7 +12,7 @@
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
-├── parser
+├── cli
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs

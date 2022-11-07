@@ -32,7 +32,7 @@ pub fn read_input_configfile(path : &str) {
      
 }
 
-pub fn init_parser() {
+pub fn init_cli() {
  
     read_configfile();
     let mut line_editor = Reedline::create();
