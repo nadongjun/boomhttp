@@ -2,14 +2,21 @@ use std::io::prelude::*;
 use std::fs::File;
 use std::net::TcpListener;
 use std::net::TcpStream;
+
 use util;
+use multithreadhttp::ThreadPool;
 
 pub fn init_http_server() {
     let listener = TcpListener::bind("localhost:8080").unwrap();
+    let pool = ThreadPool::new(4);
     for stream in listener.incoming() {
         let stream = stream.unwrap();
         println!("---- HTTP Connection established! ----\n");
-        handle_connection(stream)
+        //handle_connection(stream)
+		pool.execute(|| {
+			handle_connection(stream);
+		});
+
     }
 }
 
