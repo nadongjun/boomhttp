@@ -53,8 +53,8 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 name = "boomserver"
 version = "0.1.0"
 dependencies = [
+ "http",
  "parser",
- "util",
 ]
 
 [[package]]
@@ -262,6 +262,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "62b467343b94ba476dcb2500d242dadbb39557df889310ac77c5d99100aaac33"
 dependencies = [
  "libc",
+]
+
+[[package]]
+name = "http"
+version = "0.1.0"
+dependencies = [
+ "util",
 ]
 
 [[package]]

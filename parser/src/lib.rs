@@ -4,7 +4,6 @@ use reedline::{DefaultPrompt, Reedline, Signal};
 use std::str;
 use colored::Colorize;
 
-
 #[derive(StructOpt)]
 struct Cli {
     #[structopt(parse(from_os_str))]

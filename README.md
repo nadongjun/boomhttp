@@ -16,6 +16,10 @@
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
+├── http
+│   ├── Cargo.toml
+│   └── src
+│       └── lib.rs
 ├── src
 │   └── main.rs
 ├── tests
@@ -25,6 +29,9 @@
 
 
 ## Module
+### http
+- http 서버 실행 및 멀티스레드 처리
+  
 ### parser
 - cli 파라미터 파싱
 - Loop reedline 
