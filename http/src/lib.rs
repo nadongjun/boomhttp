@@ -11,7 +11,7 @@ pub fn init_http_server() {
     for stream in listener.incoming() {
         let stream = stream.unwrap();
         println!("---- HTTP Connection established! ----\n");
-        //handle_connection(stream)
+
 		pool.execute(|| {
 			handle_connection(stream);
 		});

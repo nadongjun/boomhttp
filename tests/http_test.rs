@@ -1,7 +1,19 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(util::generate_response("404", "ERROR"), "HTTP/1.1 404 ERROR\r\nContent-Length: 0\r\n\r\n");
-    }
+use httpmock::prelude::*;
+use isahc::get;
+
+#[test]
+fn simple_test() {
+    http::init_http_server();
+
+    let server = MockServer::connect("localhost:8080");
+
+    let hello_mock = server.mock(|when, then|{
+        when.path("configuration/config.json");
+        then.status(200);
+    });
+
+    let response = get(server.url("configuration/config.json")).unwrap();
+
+    hello_mock.assert();
+    assert_eq!(response.status(), 200);
 }

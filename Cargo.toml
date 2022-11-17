@@ -8,3 +8,7 @@ edition = "2021"
 [dependencies]
 cli = { path = "cli" }
 http = { path = "http" }
+multithreadhttp = { path = "multithreadhttp" }
+util = { path = "util" }
+httpmock = "0.6"
+isahc = "*"
