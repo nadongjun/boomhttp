@@ -3,7 +3,7 @@ use std::fs::File;
 use std::net::TcpListener;
 use std::net::TcpStream;
 use backend;
-use multithreadhttp::ThreadPool;
+use pool::ThreadPool;
 
 pub fn init_http_server() {
     let listener = TcpListener::bind("localhost:8080").unwrap();

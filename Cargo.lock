@@ -280,7 +280,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "boomserver"
+name = "boomhttp"
 version = "0.1.0"
 dependencies = [
  "backend",
@@ -288,7 +288,7 @@ dependencies = [
  "http 0.1.0",
  "httpmock",
  "isahc",
- "multithreadhttp",
+ "pool",
 ]
 
 [[package]]
@@ -782,7 +782,7 @@ name = "http"
 version = "0.1.0"
 dependencies = [
  "backend",
- "multithreadhttp",
+ "pool",
 ]
 
 [[package]]
@@ -1121,10 +1121,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "multithreadhttp"
-version = "0.1.0"
-
-[[package]]
 name = "new_debug_unreachable"
 version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1311,6 +1307,10 @@ dependencies = [
  "wepoll-ffi",
  "winapi",
 ]
+
+[[package]]
+name = "pool"
+version = "0.1.0"
 
 [[package]]
 name = "precomputed-hash"

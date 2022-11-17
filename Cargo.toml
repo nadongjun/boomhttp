@@ -1,5 +1,5 @@
 [package]
-name = "boomserver"
+name = "boomhttp"
 version = "0.1.0"
 edition = "2021"
 
@@ -8,7 +8,7 @@ edition = "2021"
 [dependencies]
 cli = { path = "cli" }
 http = { path = "http" }
-multithreadhttp = { path = "multithreadhttp" }
+pool = { path = "pool" }
 backend = { path = "backend" }
 httpmock = "0.6"
 isahc = "*"

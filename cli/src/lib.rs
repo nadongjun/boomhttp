@@ -34,7 +34,7 @@ pub fn init_cli() {
                     backend::read_input_configfile(&s)
                 }
                 Ok(Signal::CtrlD) | Ok(Signal::CtrlC) => {
-                    println!("\nAborted!");
+                    println!("Aborted");
                     break;
                 }
                 x => {

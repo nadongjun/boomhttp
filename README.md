@@ -1,4 +1,17 @@
 # boomhttp
+
+## Run 
+```sh
+source $HOME/.cargo/env
+# configuration 파일을 읽음
+cargo run -- configuration/config.json
+```
+
+## Test
+```sh
+cargo test
+```
+
 ## Requirements
 1. 설정 파일을 읽어오는 CLI application을 만든다.
 2. TCP 소켓 연결요청을 수신한다.
@@ -8,7 +21,7 @@
 
 ## Structure
 ```
-├── util
+├── backend
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
@@ -20,7 +33,7 @@
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
-├── multithreadhttp
+├── pool
 │   ├── Cargo.toml
 │   └── src
 │       └── lib.rs
@@ -36,25 +49,16 @@
 ### http
 - http 서버 실행 
   
-### multithreadhttp
+### pool
 - http 요청 멀티스레드 처리
 
 ### parser
 - cli 파라미터 파싱
 - Loop reedline 
-```sh
-source $HOME/.cargo/env
-# configuration 파일을 읽음
-cargo run -- configuration/config.json
-```
 
-### util
+### backend
 - HTTP 응답 메세지 생성
-
-## Test
-```sh
-cargo test
-```
+- CRUD 요청 처리
 
 ## To-do
 1. CRUD 기능 구현 (GET, PUT, DEL) [구현](backend/src/lib.rs)
