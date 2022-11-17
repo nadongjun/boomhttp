@@ -1,1 +1,5 @@
-{"test" : "test"}
+{   
+    "port" : "8080", 
+    "serverName" : "boom-http", 
+    "admin" : "dongjunna"
+}
