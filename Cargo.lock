@@ -219,6 +219,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d468802bab17cbc0cc575e9b053f41e72aa36bfa6b7f55e3529ffa43161b97fa"
 
 [[package]]
+name = "backend"
+version = "0.1.0"
+dependencies = [
+ "colored",
+ "reedline",
+ "structopt",
+]
+
+[[package]]
 name = "base64"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -274,12 +283,12 @@ dependencies = [
 name = "boomserver"
 version = "0.1.0"
 dependencies = [
+ "backend",
  "cli",
  "http 0.1.0",
  "httpmock",
  "isahc",
  "multithreadhttp",
- "util",
 ]
 
 [[package]]
@@ -352,6 +361,7 @@ dependencies = [
 name = "cli"
 version = "0.1.0"
 dependencies = [
+ "backend",
  "colored",
  "reedline",
  "structopt",
@@ -771,8 +781,8 @@ dependencies = [
 name = "http"
 version = "0.1.0"
 dependencies = [
+ "backend",
  "multithreadhttp",
- "util",
 ]
 
 [[package]]
@@ -1878,10 +1888,6 @@ name = "utf8parse"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "936e4b492acfd135421d8dca4b1aa80a7bfc26e702ef3af710e0752684df5372"
-
-[[package]]
-name = "util"
-version = "0.1.0"
 
 [[package]]
 name = "value-bag"

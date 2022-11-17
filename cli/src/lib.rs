@@ -1,8 +1,8 @@
 use structopt::StructOpt;
 use std::thread;
 use reedline::{DefaultPrompt, Reedline, Signal};
-use std::str;
 use colored::Colorize;
+use backend;
 
 #[derive(StructOpt)]
 struct Cli {
@@ -17,20 +17,7 @@ pub fn read_configfile() {
             println!("{}", format!("{}",line.bold()));
     }
 }
-
-pub fn read_input_configfile(path : &str) {
-    println!("{} : {}", format!("INPUT Configuration file path : ").bold().green(), path);
-    let path = path.replace('"', "");
-    //let mut file = std::fs::File::create(path).expect("create failed");
-
-    let result = std::fs::read_to_string(&path);
-    match result {
-        Ok(content) => { println!("{}", format!("file content: \n{}", content).bold());},
-        Err(error) => { println!("{} {} : {}", format!("Not found : ").bold().red() , format!("{}", error).bold().red(), path);}
-    }
-     
-     
-}
+ 
 
 pub fn init_cli() {
  
@@ -44,7 +31,7 @@ pub fn init_cli() {
             match sig {
                 Ok(Signal::Success(buffer)) => {
                     let s = format!("{:?}", &buffer);
-                    read_input_configfile(&s)
+                    backend::read_input_configfile(&s)
                 }
                 Ok(Signal::CtrlD) | Ok(Signal::CtrlC) => {
                     println!("\nAborted!");
@@ -56,12 +43,4 @@ pub fn init_cli() {
             }
         }
     });
-}
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-       // assert_eq!(1,1);
-    }
 }

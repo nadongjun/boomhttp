@@ -9,3 +9,4 @@ edition = "2021"
 structopt = "0.3.13"
 reedline = "0.13.0"
 colored = "*"
+backend = { path = "../backend" }

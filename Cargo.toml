@@ -9,6 +9,6 @@ edition = "2021"
 cli = { path = "cli" }
 http = { path = "http" }
 multithreadhttp = { path = "multithreadhttp" }
-util = { path = "util" }
+backend = { path = "backend" }
 httpmock = "0.6"
 isahc = "*"

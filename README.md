@@ -57,8 +57,7 @@ cargo test
 ```
 
 ## To-do
-1. URL parser 추가
-2. CRUD 기능 구현 (GET, PUT, DEL)
+1. CRUD 기능 구현 (GET, PUT, DEL) [구현](backend/src/lib.rs)
    
 ## Reference
 - [lib생성](https://webcache.googleusercontent.com/search?q=cache:MvISwrshgSYJ:https://bguru.tistory.com/55&cd=7&hl=ko&ct=clnk&gl=kr)

@@ -2,7 +2,7 @@ use std::io::prelude::*;
 use std::fs::File;
 use std::net::TcpListener;
 use std::net::TcpStream;
-use util;
+use backend;
 use multithreadhttp::ThreadPool;
 
 pub fn init_http_server() {
@@ -40,21 +40,21 @@ fn handle_connection(mut stream: TcpStream) {
             contents.len(),
             contents
         );
-        //GET CONFIG
+
         stream.write(response.as_bytes()).unwrap();
         stream.flush().unwrap();
     } else if buffer.starts_with(put) {
         //UPDATE CONFIG
-        stream.write(util::generate_response("200", "OK").as_bytes()).unwrap();
+        stream.write(backend::generate_response("200", "OK").as_bytes()).unwrap();
         stream.flush().unwrap();
 
     } else if buffer.starts_with(del) {
         //DELETE CONFIG
-        stream.write(util::generate_response("200", "OK").as_bytes()).unwrap();
+        stream.write(backend::generate_response("200", "OK").as_bytes()).unwrap();
         stream.flush().unwrap();
 
     } else {
-        stream.write(util::generate_response("404", "NOT OK").as_bytes()).unwrap();
+        stream.write(backend::generate_response("404", "NOT OK").as_bytes()).unwrap();
         stream.flush().unwrap();
     }
  
