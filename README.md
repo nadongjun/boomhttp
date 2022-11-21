@@ -3,8 +3,15 @@
 ## Run 
 ```sh
 source $HOME/.cargo/env
-# configuration 파일을 읽음
+# 시작 시 configuration (기본 설정 파일)을 읽음
 cargo run -- configuration/config.json
+```
+## URL
+```
+POST http://localhost:8080/filename&content
+GET http://localhost:8080/filename
+PUT http://localhost:8080/filename&modifiedContent
+DELETE http://localhost:8080/filename
 ```
 
 ## Test

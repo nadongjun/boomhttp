@@ -53,3 +53,4 @@ pub fn parse_url(_url : &str) -> String {
     let response = format!("{}", contents);
     return response
 }
+
