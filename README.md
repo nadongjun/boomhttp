@@ -71,7 +71,6 @@ cargo test
 - CRUD 요청 처리
 
 ## To-do
-1. CRUD 기능 구현 (GET, PUT, DEL) [구현](backend/src/lib.rs)
-   
+
 ## Reference
 - [lib생성](https://webcache.googleusercontent.com/search?q=cache:MvISwrshgSYJ:https://bguru.tistory.com/55&cd=7&hl=ko&ct=clnk&gl=kr)
