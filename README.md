@@ -74,3 +74,4 @@ cargo test
 
 ## Reference
 - [lib생성](https://webcache.googleusercontent.com/search?q=cache:MvISwrshgSYJ:https://bguru.tistory.com/55&cd=7&hl=ko&ct=clnk&gl=kr)
+- [멀티스레드](https://github.com/Multimo/rust-threaded-server)
