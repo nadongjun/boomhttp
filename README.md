@@ -1,5 +1,8 @@
 # boomhttp
 
+## Docs
+[docs](docs/boomhttp.pdf)
+
 ## Run 
 ```sh
 source $HOME/.cargo/env
